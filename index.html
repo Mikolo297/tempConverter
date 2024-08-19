@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            padding: 20px 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: rosybrown;
+            display: flex;
+            flex-direction: column;
+        }
+        #input{
+            width: 300px;
+            padding: 10px 10px;
+            margin: 10px;
+        }
+        button{
+            width: 30%;
+            padding: 7px 10px;
+            border-radius: 15px;
+            background-color: royalblue;
+            color: white;
+            border: 1px solid royalblue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <input id="input" type="number">
+        <button onclick="convertTemp()">convertTemp</button>
+        <div id="outer"></div>
+    </section>
+    <script>
+        function convertTemp() {
+            let input = document.getElementById('input')
+            let outer = document.getElementById('outer')
+
+            let inputValue = Number(input.value)
+
+           
+
+            input.value = "";
+            outer.innerHTML = "";
+
+            let convertTemp = (inputValue * 9/5) + 32
+            outer.innerHTML = (`the converted temperature is ${convertTemp}F`) 
+        }
+
+
+         // function convertTemp(a = 0,b = 0,c = 0) {
+        //   let convertTemp =  ((Math.random() * 9/5) + 32)
+        //   return convertTemp
+        // }
+        // console.log(`the converted temperature is ${convertTemp((Math.random * 9/5) + 32)}F`);
+
+       
+        
+    </script>
+</body>
+</html>
